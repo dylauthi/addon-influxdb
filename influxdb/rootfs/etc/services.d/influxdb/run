@@ -15,5 +15,8 @@ done
 
 bashio::log.info 'Starting the InfluxDB...'
 
+# Attempt to fix ulimit issue with HomeAssistant OS 16
+/usr/local/ulimit/set_ulimit.sh
+
 # Run InfluxDB
 exec influxd
